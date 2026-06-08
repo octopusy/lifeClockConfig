@@ -1,6 +1,6 @@
 {
   "versionCode": "1.0.1",
-  "apkUrl": "https://github.com/octopusy/lifeClockConfig/raw/refs/heads/main/clock-app.apk",
+  "apkUrl": "https://richardlifeclock.netlify.app/clock-app.apk",
   "changelog": "1. 新增功能\n2. 修复若干 bug",
   "force": true,
   "inherit": true
