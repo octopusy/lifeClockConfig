@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>生辰录App - 隐私政策</title>
+    <style>
+        :root {
+            --bg-color-primary: #f7f8fa;
+            --bg-color-secondary: #ffffff;
+            --text-color-primary: #1a1a2e;
+            --text-color-secondary: #555;
+            --text-color-tertiary: #888;
+            --accent-color-blue: #533483;
+            --accent-color-orange: #ff9a56;
+            --border-color: #e0e0e0;
+            --highlight-bg: #fff8f0;
+            --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
+            --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.08);
+            --radius-md: 12px;
+            --font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
+            --font-title: "Georgia", "Songti SC", "Noto Serif SC", serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background-color: var(--bg-color-primary);
+            color: var(--text-color-primary);
+            line-height: 1.8;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .policy-container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 48px;
+            background-color: var(--bg-color-secondary);
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-md);
+        }
+
+        @media (max-width: 768px) {
+            .policy-container {
+                margin: 0;
+                padding: 24px 20px;
+                border-radius: 0;
+                box-shadow: none;
+            }
+        }
+
+        .header-section {
+            text-align: center;
+            margin-bottom: 36px;
+            padding-bottom: 28px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .header-logo-concept {
+            width: 64px;
+            height: 64px;
+            margin: 0 auto 20px auto;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #1a1a2e 0%, #2d2d44 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 16px rgba(26, 26, 46, 0.25);
+            position: relative;
+        }
+
+        .header-logo-concept::before {
+            content: '';
+            position: absolute;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            border: 2.5px solid transparent;
+            border-top-color: var(--accent-color-orange);
+            border-right-color: var(--accent-color-blue);
+            transform: rotate(45deg);
+            animation: spin 6s linear infinite;
+        }
+
+        .header-logo-concept::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background-color: var(--accent-color-orange);
+            top: 12px;
+            right: 16px;
+            box-shadow: 0 0 8px rgba(255, 154, 86, 0.6);
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .app-title {
+            font-family: var(--font-title);
+            font-size: 1.9rem;
+            color: var(--text-color-primary);
+            margin-bottom: 6px;
+        }
+
+        .effective-date {
+            font-size: 0.88rem;
+            color: var(--text-color-tertiary);
+        }
+
+        .intro-text {
+            margin-bottom: 28px;
+            font-size: 1rem;
+            color: var(--text-color-secondary);
+            line-height: 1.9;
+        }
+
+        .core-promise {
+            background: linear-gradient(135deg, #1a1a2e 0%, #2d2d44 100%);
+            color: #e0e0e0;
+            padding: 20px 24px;
+            border-radius: 10px;
+            margin-bottom: 36px;
+            font-size: 0.95rem;
+            line-height: 1.8;
+        }
+
+        .core-promise strong {
+            color: var(--accent-color-orange);
+        }
+
+        h2 {
+            font-family: var(--font-title);
+            font-size: 1.35rem;
+            color: var(--text-color-primary);
+            margin: 36px 0 16px 0;
+            padding-bottom: 8px;
+            border-bottom: 2px solid var(--accent-color-orange);
+            display: inline-block;
+        }
+
+        h3 {
+            font-size: 1.1rem;
+            color: var(--accent-color-blue);
+            margin: 24px 0 12px 0;
+        }
+
+        p {
+            margin-bottom: 14px;
+            font-size: 0.95rem;
+            color: var(--text-color-secondary);
+        }
+
+        ul, ol {
+            margin: 0 0 16px 20px;
+            font-size: 0.95rem;
+            color: var(--text-color-secondary);
+        }
+
+        li {
+            margin-bottom: 8px;
+            line-height: 1.7;
+        }
+
+        .highlight-box {
+            background-color: var(--highlight-bg);
+            border-left: 4px solid var(--accent-color-orange);
+            padding: 16px 20px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .highlight-box p {
+            margin-bottom: 8px;
+            color: var(--text-color-primary);
+            font-weight: 500;
+        }
+
+        .highlight-box p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* 权限表格 */
+        .permission-table-wrapper {
+            overflow-x: auto;
+            margin: 16px 0 24px 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.9rem;
+        }
+
+        thead th {
+            background-color: #1a1a2e;
+            color: #e0e0e0;
+            padding: 12px 14px;
+            text-align: left;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+
+        thead th:first-child {
+            border-radius: 8px 0 0 0;
+        }
+
+        thead th:last-child {
+            border-radius: 0 8px 0 0;
+        }
+
+        tbody td {
+            padding: 12px 14px;
+            border-bottom: 1px solid var(--border-color);
+            color: var(--text-color-secondary);
+            vertical-align: top;
+        }
+
+        tbody tr:last-child td:first-child {
+            border-radius: 0 0 0 8px;
+        }
+
+        tbody tr:last-child td:last-child {
+            border-radius: 0 0 8px 0;
+        }
+
+        tbody tr:hover {
+            background-color: #fafafa;
+        }
+
+        .tag-required {
+            display: inline-block;
+            background-color: #ffe8e0;
+            color: #c0392b;
+            font-size: 0.78rem;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+
+        .tag-optional {
+            display: inline-block;
+            background-color: #e8f4ff;
+            color: #2980b9;
+            font-size: 0.78rem;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+
+        /* Google Play数据披露表格 */
+        .gp-data-table {
+            margin: 16px 0 24px 0;
+        }
+
+        .gp-data-table th {
+            background-color: #533483;
+        }
+
+        .data-type-no {
+            color: #27ae60;
+            font-weight: 600;
+        }
+
+        .data-type-yes {
+            color: #e67e22;
+        }
+
+        .contact-section {
+            margin-top: 40px;
+            padding: 24px;
+            background-color: #f7f8fa;
+            border-radius: 10px;
+        }
+
+        .contact-section h2 {
+            border-bottom-color: var(--accent-color-blue);
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            font-size: 0.95rem;
+        }
+
+        .contact-label {
+            font-weight: 600;
+            color: var(--text-color-primary);
+            min-width: 80px;
+        }
+
+        .footer-note {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+            font-size: 0.82rem;
+            color: var(--text-color-tertiary);
+        }
+    </style>
+</head>
+<body>
+
+<div class="policy-container">
+
+    <div class="header-section">
+        <div class="header-logo-concept"></div>
+        <h1 class="app-title">生辰录 隐私政策</h1>
+        <p class="effective-date">生效日期：2026年6月10日 &nbsp;|&nbsp; Version 1.0</p>
+    </div>
+
+    <div class="intro-text">
+        <p>欢迎使用生辰录！我们深知个人信息对您的重要性，并将按照法律法规的规定，保护您的个人信息及隐私安全。生辰录是一款非焦虑型生命感知与生活沉淀工具，我们的核心隐私承诺是：</p>
+    </div>
+
+    <div class="core-promise">
+        <strong>🛡️ 本地优先 · 最小化收集 · 匿名可用</strong><br>
+        您的核心数据（生辰、感悟、照片）默认仅存在于您的设备本地，采用AES-256加密；您可以完全不注册账号、不提供手机号即可使用全部核心功能；我们绝不向您推送任何商业营销广告。
+    </div>
+
+    <!-- ==================== 第一部分 ==================== -->
+    <h2>一、我们收集的信息</h2>
+    <p>我们仅会收集实现产品核心功能所必需的最少信息，且大部分敏感数据默认仅在您的设备本地处理。</p>
+
+    <h3>1.1 您主动提供的信息</h3>
+    <ul>
+        <li><strong>生辰信息</strong>：出生日期与时间（支持公历/农历）。该信息<strong>默认仅存储在您的本地设备中并经AES-256加密</strong>，绝不主动上传至我们的服务器，仅用于为您生成精确的生辰时钟与人生进度可视化。</li>
+        <li><strong>人生感悟与日记</strong>：您在发呆思考区或光影人生中主动输入的文字。默认<strong>仅保存在您的本地设备</strong>。</li>
+        <li><strong>照片与视频素材</strong>：您上传用于生成光影人生海报/视频的媒体文件。原始文件<strong>仅保存在您的本地设备</strong>。</li>
+        <li><strong>紧急联系人信息</strong>（独居安全功能）：如您主动设置，需提供联系人姓名、手机号、关系。该信息<strong>本地AES-256加密存储</strong>，仅在触发超时预警时通过第三方短信服务发送提醒。</li>
+    </ul>
+
+    <h3>1.2 我们自动收集的信息</h3>
+    <ul>
+        <li><strong>设备与日志信息</strong>：为保障App稳定运行、优化计时精度，我们可能会收集设备型号、操作系统版本、应用崩溃日志等基础非个人设备信息。此类数据不包含设备唯一硬件标识符（如IMEI/MAC地址）。</li>
+        <li><strong>匿名化行为统计数据</strong>：如发呆总时长、生成作品数、目标完成数等。该数据仅用于在您的设备端生成"个人生活成长报告"，<strong>不包含任何可识别您身份的信息，不上传至服务器</strong>。</li>
+    </ul>
+
+    <div class="highlight-box">
+        <p>⛔ 我们<strong>不强制要求</strong>您注册账号或提供手机号，您可完全匿名使用核心功能。</p>
+        <p>⛔ 我们<strong>不收集</strong>您的通讯录、精确地理位置、设备唯一硬件标识符等非必要权限。</p>
+        <p>⛔ 我们<strong>不向任何第三方出售、出租或交易</strong>您的个人信息。</p>
+    </div>
+
+    <!-- ==================== 第二部分 ==================== -->
+    <h2>二、我们如何使用信息</h2>
+    <p>我们仅将上述必要信息用于以下核心目的，绝不用于任何商业营销或焦虑贩卖：</p>
+    <ol>
+        <li><strong>核心功能实现</strong>：为您提供生辰秒级时钟、人生剩余意义规划、发呆治愈引导、光影人生内容生成、独居安全预警等服务。</li>
+        <li><strong>本地体验优化</strong>：基于本地行为数据为您生成个性化成长轨迹与报告。</li>
+        <li><strong>稳定性保障</strong>：通过匿名崩溃日志修复Bug，优化计时引擎的低功耗运行。</li>
+    </ol>
+
+    <!-- ==================== 第三部分 ==================== -->
+    <h2>三、我们如何存储与保护信息</h2>
+
+    <h3>3.1 本地优先存储策略</h3>
+    <p>您的生辰信息、感悟文字、照片视频等高度敏感数据，<strong>默认采用AES-256加密算法存储在您的本地设备中</strong>。应用核心计时、规划、发呆、签到功能<strong>100%支持离线使用</strong>，无需网络连接即可正常运行。</p>
+
+    <h3>3.2 可选的云端备份（端到端加密）</h3>
+    <p>如您希望在不同设备间同步数据，可手动授权开启"云端加密备份"。</p>
+    <ul>
+        <li>开启后，数据将采用<strong>端到端加密（TLS 1.3传输 + 服务器不可解密）</strong>存储于云端。</li>
+        <li>加密密钥仅保存在您的本地设备，我们及任何第三方均<strong>无法查看您的备份数据内容</strong>。</li>
+    </ul>
+
+    <h3>3.3 数据存储地域</h3>
+    <ul>
+        <li><strong>中国大陆用户</strong>：云端备份数据存储于中华人民共和国境内的云服务器，符合《个人信息保护法》《数据安全法》要求。</li>
+        <li><strong>海外用户（Google Play版）</strong>：云端备份数据存储于用户就近区域的云服务器，符合GDPR/CCPA要求。</li>
+    </ul>
+
+    <!-- ==================== 第四部分 ==================== -->
+    <h2>四、我们如何共享、转让与公开披露信息</h2>
+    <p><strong>除以下情形外，我们绝不共享、转让或公开披露您的个人信息：</strong></p>
+    <ol>
+        <li><strong>您主动分享</strong>：您将生成的光影人生海报、视频或人生进度截图，主动分享至第三方社交平台时，相关内容由您自主控制。</li>
+        <li><strong>紧急联系人预警</strong>：如您开启"紧急联系人预警"功能，当您超时（24/48/72小时，可自选）未签到时，系统将通过第三方短信服务向您预设的联系人发送预警短信。预警短信<strong>仅包含基础提醒信息，绝不暴露您的详细地理位置或生辰数据</strong>。</li>
+        <li><strong>第三方服务提供商</strong>：我们可能委托第三方提供服务（如崩溃日志收集、云存储），但我们仅提供必要数据，并要求其遵守同等保密义务。</li>
+        <li><strong>法律法规要求</strong>：根据相关法律法规、法律程序或政府部门的强制性要求。</li>
+    </ol>
+
+    <div class="highlight-box">
+        <p>📌 <strong>关于广告</strong>：生辰录<strong>不含任何开屏广告、信息流广告及强制性弹窗</strong>。所有推送内容均为正向治愈型（如"您已连续记录一周感悟"），严禁营销广告。我们<strong>不会</strong>将您的个人信息用于广告定向投放。</p>
+    </div>
+
+    <!-- ==================== 第五部分：权限说明（国内重点） ==================== -->
+    <h2>五、权限申请与使用说明</h2>
+    <p>以下为生辰录可能申请的系统权限及其使用目的。我们遵循"最小必要"原则，不会申请与功能无关的权限。</p>
+
+    <div class="permission-table-wrapper">
+        <table>
+            <thead>
+            <tr>
+                <th>权限名称</th>
+                <th>使用目的</th>
+                <th>是否必须</th>
+                <th>拒绝后果</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>相册/照片读取</td>
+                <td>用于"光影人生"功能中选择照片生成海报/视频</td>
+                <td><span class="tag-optional">可选</span></td>
+                <td>无法使用光影人生生成功能，不影响其他功能</td>
+            </tr>
+            <tr>
+                <td>本地音乐读取</td>
+                <td>用于"光影人生"功能中自定义视频背景音乐</td>
+                <td><span class="tag-optional">可选</span></td>
+                <td>无法使用自定义音乐，可选用内置音乐库</td>
+            </tr>
+            <tr>
+                <td>后台运行</td>
+                <td>用于生辰时钟在后台的精准计时与低功耗运行</td>
+                <td><span class="tag-required">必须</span></td>
+                <td>切换至后台后计时不准确</td>
+            </tr>
+            <tr>
+                <td>网络访问</td>
+                <td>用于AI视频生成、云端备份、预警短信发送</td>
+                <td><span class="tag-optional">可选</span></td>
+                <td>无法使用需联网功能，核心功能可离线使用</td>
+            </tr>
+            <tr>
+                <td>通知推送</td>
+                <td>用于"每日一帧"等正向治愈提醒（默认关闭，需手动开启）</td>
+                <td><span class="tag-optional">可选</span></td>
+                <td>无法收到治愈提醒，不影响核心功能</td>
+            </tr>
+            <tr>
+                <td>短信发送</td>
+                <td>用于"独居安全"功能中超时预警短信发送</td>
+                <td><span class="tag-optional">可选</span></td>
+                <td>无法向紧急联系人发送预警短信</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <p><strong>特别说明</strong>：生辰录<strong>不申请</strong>以下权限：通讯录读取、精确定位、设备IMEI/MAC地址、系统勿扰模式控制、健康数据（HealthKit/Google Fit为可选联动，不作为核心依赖）。</p>
+
+    <!-- ==================== 第六部分：Google Play 数据披露 ==================== -->
+    <h2>六、Google Play 数据披露</h2>
+    <p>根据Google Play的数据透明度要求，以下明确说明生辰录处理用户数据的方式：</p>
+
+    <div class="permission-table-wrapper gp-data-table">
+        <table>
+            <thead>
+            <tr>
+                <th>数据类型</th>
+                <th>是否收集</th>
+                <th>用途</th>
+                <th>是否加密</th>
+                <th>能否删除</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>精确位置</td>
+                <td><span class="data-type-no">否</span></td>
+                <td>—</td>
+                <td>—</td>
+                <td>—</td>
+            </tr>
+            <tr>
+                <td>大致位置</td>
+                <td><span class="data-type-no">否</span></td>
+                <td>—</td>
+                <td>—</td>
+                <td>—</td>
+            </tr>
+            <tr>
+                <td>个人标识符（姓名/邮箱/ID）</td>
+                <td><span class="data-type-no">否</span></td>
+                <td>无需注册，完全匿名可用</td>
+                <td>—</td>
+                <td>—</td>
+            </tr>
+            <tr>
+                <td>个人身份信息（生日/生辰）</td>
+                <td><span class="data-type-yes">是（仅本地）</span></td>
+                <td>生辰时钟计算</td>
+                <td>AES-256本地加密</td>
+                <td>可随时删除</td>
+            </tr>
+            <tr>
+                <td>照片和视频</td>
+                <td><span class="data-type-yes">是（仅本地）</span></td>
+                <td>光影人生内容生成</td>
+                <td>AES-256本地加密</td>
+                <td>可随时删除</td>
+            </tr>
+            <tr>
+                <td>应用活动（发呆时长/目标完成）</td>
+                <td><span class="data-type-yes">是（仅本地）</span></td>
+                <td>生成个人成长报告</td>
+                <td>本地存储</td>
+                <td>可随时删除</td>
+            </tr>
+            <tr>
+                <td>应用崩溃日志</td>
+                <td><span class="data-type-yes">是（匿名化）</span></td>
+                <td>稳定性优化</td>
+                <td>TLS传输</td>
+                <td>90天自动清除</td>
+            </tr>
+            <tr>
+                <td>设备标识符</td>
+                <td><span class="data-type-no">否</span></td>
+                <td>—</td>
+                <td>—</td>
+                <td>—</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="highlight-box">
+        <p>🔒 <strong>数据本地化原则</strong>：生辰录的核心设计理念是"数据不出设备"。上表中标注"仅本地"的数据，<strong>不会通过网络传输至我们的服务器</strong>，除非您主动开启"云端加密备份"功能。</p>
+    </div>
+
+    <!-- ==================== 第七部分 ==================== -->
+    <h2>七、您的权利</h2>
+    <p>我们在产品设计中为您提供了充分的控制权：</p>
+    <ol>
+        <li><strong>匿名使用权</strong>：您有权拒绝注册账号，直接匿名使用全部核心功能。</li>
+        <li><strong>信息修改权</strong>：您可随时在App个人中心修改您的生辰信息及相关设置，修改后所有相关数据实时重新计算。</li>
+        <li><strong>数据导出权</strong>：在设置中，您有权一键导出所有您输入的本地个人数据（支持JSON格式）。</li>
+        <li><strong>彻底删除权</strong>：我们为您提供<strong>"一键清空所有本地数据"</strong>功能。点击后，将<strong>彻底且不可恢复地</strong>清除您在设备上的所有记录。若您已开启云端备份，删除操作也将同步触发云端数据的永久抹除。</li>
+        <li><strong>推送控制权</strong>：所有推送默认关闭，您可自定义推送频率为"每日"、"每周"或"完全关闭"。</li>
+        <li><strong>欧盟/加州用户特别权利</strong>：根据GDPR/CCPA，您享有数据访问权、更正权、删除权（被遗忘权）、数据可携带权、拒绝自动化决策权。您可通过下方联系方式行使上述权利。</li>
+    </ol>
+
+    <!-- ==================== 第八部分 ==================== -->
+    <h2>八、未成年人保护</h2>
+    <p>生辰录主要面向25-45岁核心群体与18-24岁次要群体。我们不会主动收集未成年人的个人信息。若您是未满18周岁的未成年人，请在监护人指导下使用本产品。如果我们发现在未获监护人同意的情况下收集了未成年人的个人信息，将立即设法删除相关数据。</p>
+
+    <!-- ==================== 第九部分 ==================== -->
+    <h2>九、本政策的更新</h2>
+    <p>我们可能会适时修订本政策。未经您明确同意，我们不会削减您按照本政策所应享有的权利。政策更新后，我们会在App内通过弹窗或公告方式向您告知重大变更。对于法律法规要求的变更，我们将在生效前于App内公示不少于7个工作日。</p>
+
+    <!-- ==================== 第十部分 ==================== -->
+    <div class="contact-section">
+        <h2>十、联系我们</h2>
+        <p>如您对本政策有任何疑问、意见或建议，可通过App内的"用户反馈系统"匿名提交，或通过以下方式联系我们：</p>
+
+        <div class="contact-item">
+            <span class="contact-label">电子邮箱</span>
+            <span>583206137@qq.com</span>
+        </div>
+        <div class="contact-item">
+            <span class="contact-label">运营主体</span>
+            <span>【Richard】</span>
+        </div>
+        <div class="contact-item">
+            <span class="contact-label">响应时效</span>
+            <span>我们将在48小时内回复您的反馈</span>
+        </div>
+
+        <p style="margin-top: 16px; font-size: 0.88rem; color: var(--text-color-tertiary);">如果您认为我们的个人信息处理行为损害了您的合法权益，您可以向网信部门、公安部门或您所在地的消费者权益保护组织投诉举报。</p>
+    </div>
+
+    <div class="footer-note">
+        本政策适用于生辰录App国内安卓版与Google Play版 &nbsp;|&nbsp; © 2026 生辰录
+    </div>
+
+</div>
+
+</body>
+</html>
